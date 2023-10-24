@@ -46,6 +46,10 @@ export const aboutData = [
         title: 'Marketing Staff - Quick Traktor',
         stage: '2017 - 2023',
       },
+      {
+        title: 'Freelance at Fastwork',
+        stage: '2023 - present',
+      },
     ],
   },
   {
@@ -57,6 +61,14 @@ export const aboutData = [
       },
       {
         title: 'Belajar Backend untuk Pemula - Dicoding Indonesia',
+        stage: '2023',
+      },
+      {
+        title: 'Belajar Dasar AWS Cloud - Dicoding Indonesia',
+        stage: '2023',
+      },
+      {
+        title: 'Membangun Arsitektur Cloud di AWS - Dicoding Indonesia',
         stage: '2023',
       },
       {
@@ -117,7 +129,7 @@ const About = () => {
             <div className="hidden xl:flex xl:justify-evenly xl:items-center">
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 after:mr-4">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={5} /> +
+                  <CountUp start={0} end={1} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Years of experience
@@ -125,28 +137,28 @@ const About = () => {
               </div>
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 after:mr-4">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={250} duration={5} /> +
+                  <CountUp start={0} end={5} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Satisfied clients
                 </div>
               </div>
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 after:mr-4">
+              <div className="relative flex-1">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={650} duration={5} /> +
+                  <CountUp start={0} end={10} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Finished Projects
                 </div>
               </div>
-              <div className="relative flex-1">
+              {/* <div className="relative flex-1">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={8} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Winning Awards
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </motion.div>

@@ -4,7 +4,6 @@ import { BsArrowRight } from 'react-icons/bs';
 
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
-import { useEffect } from 'react';
 
 const Contact = () => {
   const handleSubmit = (e) => {

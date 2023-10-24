@@ -8,6 +8,10 @@ import { useRouter } from 'next/router';
 
 import { AnimatePresence, motion } from 'framer-motion';
 
+const metadata = {
+  title: "Helmi Ainun Naim's Personal Website",
+};
+
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   return (
