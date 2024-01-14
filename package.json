@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3002",
+    "dev": "next dev -p 3000",
     "build": "next build",
     "start": "next start -p 3002",
     "lint": "next lint"
@@ -19,7 +19,8 @@
     "react-tsparticles": "^2.9.3",
     "swiper": "^9.4.0",
     "tailwind-scrollbar": "^3.0.4",
-    "tsparticles": "^2.9.3"
+    "tsparticles": "^2.9.3",
+    "typed.js": "^2.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",

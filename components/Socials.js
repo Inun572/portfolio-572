@@ -11,7 +11,7 @@ import {
 
 const Socials = () => {
   return (
-    <div className="flex items-center gap-x-5 text-lg">
+    <div className="flex items-center gap-x-5 text-lg text-black/60">
       <Link
         href={'https://www.youtube.com/channel/UCV6lZ1qluM95bZCnxl6_lmg'}
         target="_blank"

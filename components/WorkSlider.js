@@ -20,16 +20,18 @@ const workSlides = {
         },
         {
           title: 'Bookshelf App',
-          path: '/BookshelfApp.png',
+          path: '/BookshelfApp.jpg',
           link: 'https://mybookshelfapp.vercel.app/',
         },
         {
-          title: 'title',
-          path: '/thumb3.jpg',
+          title: 'Pohon Tautanku',
+          path: '/pohontautanku.jpg',
+          link: 'https://helmiainun-link3.netlify.app/',
         },
         {
-          title: 'title',
-          path: '/thumb4.jpg',
+          title: 'Gradient Color Generator',
+          path: '/gradient-color-generator.jpg',
+          link: 'https://another-gradients-generator.netlify.app/',
         },
       ],
     },
@@ -74,7 +76,7 @@ const WorkSlider = () => {
                 return (
                   <div
                     key={index}
-                    className="relative rounded-lg overflow-hidden flex items-center justify-center group"
+                    className="relative bg-slate-300 rounded-lg overflow-hidden flex items-center justify-center group"
                   >
                     <div className="flex items-center justify-center relative overflow-hidden group">
                       <Image src={image.path} width={500} height={300} alt="" />

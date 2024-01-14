@@ -30,10 +30,10 @@ const Home = () => {
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
           >
             An ex-marketing employee who wants to switch career become Web
-            Developer and Data Analyst
+            Developer.
           </motion.p>
           <div className="flex justify-center xl:hidden relative z-[100]">
-            <ProjectBtn />
+            {/* <ProjectBtn /> */}
           </div>
           <motion.div
             variants={fadeIn('down', 0.6)}
@@ -42,7 +42,7 @@ const Home = () => {
             exit="hidden"
             className="hidden xl:flex"
           >
-            <ProjectBtn />
+            {/* <ProjectBtn /> */}
           </motion.div>
         </div>
       </div>
@@ -58,7 +58,7 @@ const Home = () => {
           exit="hidden"
           className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]"
         >
-          <Avatar />
+          <Avatar image="/sampingHD1218.png" />
         </motion.div>
       </div>
     </div>

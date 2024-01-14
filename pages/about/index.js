@@ -3,16 +3,15 @@ import React, { useState } from 'react';
 
 import CountUp from 'react-countup';
 
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaVuejs,
-  FaFigma,
-} from 'react-icons/fa';
+import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma } from 'react-icons/fa';
 
-import { SiNextdotjs, SiFramer, SiAdobephotoshop } from 'react-icons/si';
+import {
+  SiNextdotjs,
+  SiTailwindcss,
+  SiAdobephotoshop,
+  SiExpress,
+  SiRedux,
+} from 'react-icons/si';
 import { GrMysql } from 'react-icons/gr';
 
 //  data
@@ -23,19 +22,23 @@ export const aboutData = [
       {
         title: 'Web Development',
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaVuejs />,
-          <GrMysql />,
+          <FaHtml5 title="HTML5" />,
+          <FaCss3 title="CSS3" />,
+          <FaJs title="Javascript" />,
+          <FaReact title="React" />,
+          <SiNextdotjs title="Next" />,
+          <SiTailwindcss title="Tailwind CSS" />,
+          <SiRedux title="Redux" />,
+          <SiExpress title="Express" />,
+          <GrMysql title="MySQL" />,
         ],
       },
       {
         title: 'UI/UX Design',
-        icons: [<FaFigma />, <SiAdobephotoshop />],
+        icons: [
+          <FaFigma title="Figma" />,
+          <SiAdobephotoshop title="Adobe Photoshop" />,
+        ],
       },
     ],
   },
@@ -56,19 +59,19 @@ export const aboutData = [
     title: 'credentials',
     info: [
       {
-        title: 'Dasar-dasar DevOps - Dicoding Indonesia',
+        title: 'Fullstack Web Developer Bootcamp - Codemasters ID',
         stage: '2023',
       },
       {
-        title: 'Belajar Backend untuk Pemula - Dicoding Indonesia',
+        title: 'Backend Intermediate Class - Dicoding Indonesia',
         stage: '2023',
       },
       {
-        title: 'Belajar Dasar AWS Cloud - Dicoding Indonesia',
+        title: 'Frontend Fundamental Class - Dicoding Indonesia',
         stage: '2023',
       },
       {
-        title: 'Membangun Arsitektur Cloud di AWS - Dicoding Indonesia',
+        title: 'Basic DevOps and AWS Cloud - Dicoding Indonesia',
         stage: '2023',
       },
       {
@@ -81,14 +84,13 @@ export const aboutData = [
       },
       {
         title: 'Physics Engineering - Universitas Gadjah Mada',
-        stage: '2017',
+        stage: '2009 - 2017',
       },
     ],
   },
 ];
 
 import Avatar from '../../components/Avatar';
-import Circles from '../../components/Circles';
 
 import { motion } from 'framer-motion';
 
@@ -97,18 +99,17 @@ import { fadeIn } from '../../variants';
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="h-full bg-primary/300 py-32 text-center xl:text-left">
-      <Circles />
+    <div className="h-full bg-transparent py-32 text-center xl:text-left">
       <motion.div
-        variants={fadeIn('right', 0.2)}
+        variants={fadeIn('right', 0.4)}
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="hidden xl:flex absolute bottom-0 -left-[370px]"
+        className="flex absolute -left-[400px] top-0"
       >
-        <Avatar />
+        <Avatar image="/depanHD1218.png" />
       </motion.div>
-      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
+      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 relative">
         <motion.div
           variants={fadeIn('right', 0.6)}
           initial="hidden"
@@ -121,44 +122,35 @@ const About = () => {
             magnificent design
           </h2>
           <p className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl"mb-12 px-2 xl"px-0'>
-            10 years ago, I began freelancing as developer. Since then, I have
-            done remote work for agencies, consulted for startups, and
-            collaborated on digital products for business and consumer use.
+            Since 1 years ago, I was starting to transition my carier into web
+            development. Focusing on Frontend development, I am always seeking
+            new challenges and learning new things, to make stunning design and
+            best user experience.
           </p>
-          <div>
-            <div className="hidden xl:flex xl:justify-evenly xl:items-center">
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 after:mr-4">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={1} duration={5} /> +
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Years of experience
-                </div>
+          <div className="hidden xl:flex xl:justify-evenly xl:items-center">
+            <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 after:mr-4">
+              <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                <CountUp start={0} end={1} duration={5} /> +
               </div>
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 after:mr-4">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={5} duration={5} /> +
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Satisfied clients
-                </div>
+              <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+                Years of experience
               </div>
-              <div className="relative flex-1">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={5} /> +
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Finished Projects
-                </div>
+            </div>
+            <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 after:mr-4">
+              <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                <CountUp start={0} end={5} duration={5} /> +
               </div>
-              {/* <div className="relative flex-1">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={8} duration={5} /> +
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Winning Awards
-                </div>
-              </div> */}
+              <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+                Satisfied clients
+              </div>
+            </div>
+            <div className="relative flex-1">
+              <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                <CountUp start={0} end={10} duration={5} /> +
+              </div>
+              <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+                Finished Projects
+              </div>
             </div>
           </div>
         </motion.div>
@@ -176,8 +168,8 @@ const About = () => {
                   key={itemIndex}
                   className={`${
                     index === itemIndex &&
-                    'text-accent after:w-[100%] after:bg-accent after:transition-all after-duration-300'
-                  } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:bottom-1 after:left-0`}
+                    '!text-accent after:w-[100%] after:bg-accent after:transition-all after-duration-300'
+                  } text-black/60 cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:bottom-1 after:left-0`}
                   onClick={() => setIndex(itemIndex)}
                 >
                   {item.title}
@@ -190,14 +182,18 @@ const About = () => {
               return (
                 <div
                   key={itemIndex}
-                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-black/60"
                 >
                   <div className="font-light mb-2 md:mb-0">{item.title}</div>
                   <div className="hidden md:flex">-</div>
                   <div>{item.stage}</div>
                   <div className="flex gap-x-4">
                     {item.icons?.map((icon, itemIndex) => {
-                      return <div className="text-2xl">{icon}</div>;
+                      return (
+                        <div key={itemIndex} className="text-2xl">
+                          {icon}
+                        </div>
+                      );
                     })}
                   </div>
                 </div>

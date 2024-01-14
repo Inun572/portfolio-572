@@ -1,5 +1,3 @@
-import Circles from '../../components/Circles';
-
 import { BsArrowRight } from 'react-icons/bs';
 
 import { motion } from 'framer-motion';
@@ -21,7 +19,6 @@ const Contact = () => {
 
   return (
     <div className="h-full bg-primary/30">
-      <Circles />
       <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
         <div className="flex flex-col w-full max-w-[700px]">
           <motion.h2
@@ -71,11 +68,11 @@ const Contact = () => {
               className="textarea"
               name="Message"
             ></textarea>
-            <button className="btn rounded-full border border-whte/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group">
-              <span className="text-accent group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-300">
-                Let&apos;s talk
+            <button className="btn rounded-full bg-accent hover:bg-transparent hover:border hover:border-accent max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden group">
+              <span className="text-primary group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-300">
+                Send me!
               </span>
-              <BsArrowRight className="-translate-y-[120%] opacity-0 group:hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]" />
+              <BsArrowRight className="-translate-y-[120%] opacity-0 group:hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px] text-accent" />
             </button>
           </motion.form>
         </div>

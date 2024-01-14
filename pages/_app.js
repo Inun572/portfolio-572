@@ -1,5 +1,4 @@
 import '../styles/globals.css';
-import '../styles/typing.css';
 
 import Layout from '../components/Layout';
 import Transition from '../components/Transition';
