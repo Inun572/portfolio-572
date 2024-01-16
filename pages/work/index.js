@@ -1,4 +1,5 @@
 import WorkSlider from '../../components/WorkSlider';
+import ServiceSlider from '../../components/ServiceSlider';
 
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';

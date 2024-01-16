@@ -1,103 +1,71 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import { Pagination } from 'swiper';
+import { Pagination, Navigation } from 'swiper/modules';
 
 import { BsArrowRight } from 'react-icons/bs';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // data
-const workSlides = {
-  slides: [
-    {
-      images: [
-        {
-          title: 'PokecardDex',
-          path: '/pokecard-dex.vercel.app.jpeg',
-          link: 'https://pokecard-dex.vercel.app',
-        },
-        {
-          title: 'Bookshelf App',
-          path: '/BookshelfApp.jpg',
-          link: 'https://mybookshelfapp.vercel.app/',
-        },
-        {
-          title: 'Pohon Tautanku',
-          path: '/pohontautanku.jpg',
-          link: 'https://helmiainun-link3.netlify.app/',
-        },
-        {
-          title: 'Gradient Color Generator',
-          path: '/gradient-color-generator.jpg',
-          link: 'https://another-gradients-generator.netlify.app/',
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          title: 'title',
-          path: '/thumb4.jpg',
-        },
-        {
-          title: 'title',
-          path: '/thumb1.jpg',
-        },
-        {
-          title: 'title',
-          path: '/thumb2.jpg',
-        },
-        {
-          title: 'title',
-          path: '/thumb3.jpg',
-        },
-      ],
-    },
-  ],
-};
-
+const workSlides = [
+  {
+    title: 'PokecardDex',
+    path: '/pokecard-dex.vercel.app.jpeg',
+    link: 'https://pokecard-dex.vercel.app',
+  },
+  {
+    title: 'Bookshelf App',
+    path: '/BookshelfApp.jpg',
+    link: 'https://mybookshelfapp.vercel.app/',
+  },
+  {
+    title: 'Pohon Tautanku',
+    path: '/pohontautanku.jpg',
+    link: 'https://helmiainun-link3.netlify.app/',
+  },
+  {
+    title: 'Gradient Color Generator',
+    path: '/gradient-color-generator.jpg',
+    link: 'https://another-gradients-generator.netlify.app/',
+  },
+];
 const WorkSlider = () => {
   return (
     <Swiper
-      spaceBetween={10}
+      style={{
+        '--swiper-navigation-color': '#f13024',
+        '--swiper-pagination-color': '#f13024',
+        '--swiper-navigation-size': '30px',
+      }}
+      slidesPerView={1}
+      spaceBetween={30}
+      loop={true}
       pagination={{
         clickable: true,
       }}
-      modules={{ Pagination }}
-      className="h-[280px] sm:h-[480px]"
+      navigation={true}
+      modules={[Pagination, Navigation]}
+      className="w-11/12 h-[240px] lg:w-10/12 md:h-[400px]"
     >
-      {workSlides.slides.map((slide, index) => {
+      {workSlides.map((slide, index) => {
         return (
           <SwiperSlide key={index}>
-            <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
-              {slide.images.map((image, index) => {
-                return (
-                  <div
-                    key={index}
-                    className="relative bg-slate-300 rounded-lg overflow-hidden flex items-center justify-center group"
-                  >
-                    <div className="flex items-center justify-center relative overflow-hidden group">
-                      <Image src={image.path} width={500} height={300} alt="" />
-                      <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
-                      <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
-                        <a href={image.link} target="_blank">
-                          <div className="flex items-center flex-col gap-x-2 text-[13px] tracking-[0.2em]">
-                            <div className="delay-100">LIVE</div>
-                            <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
-                              PROJECT
-                            </div>
-                            <div className=" text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200">
-                              <BsArrowRight />
-                            </div>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
+            <div className="w-full h-full relative rounded-lg bg-slate-200 cursor-pointer group">
+              <Link href={slide.link} target="_blank">
+                <Image
+                  src={slide.path}
+                  alt=""
+                  width={600}
+                  height={400}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              </Link>
+              <div className="block lg:hidden absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-slate-200 to-transparent transition-all duration-300 ease-in md:group-hover:block">
+                <h3 className="text-lg font-semibold py-2">{slide.title}</h3>
+              </div>
             </div>
           </SwiperSlide>
         );
