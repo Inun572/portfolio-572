@@ -1,105 +1,15 @@
 /* eslint-disable react/jsx-key */
 import React, { useState } from 'react';
-
 import CountUp from 'react-countup';
-
-import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma } from 'react-icons/fa';
-
-import {
-  SiNextdotjs,
-  SiTailwindcss,
-  SiAdobephotoshop,
-  SiExpress,
-  SiRedux,
-} from 'react-icons/si';
-import { GrMysql } from 'react-icons/gr';
-
-//  data
-export const aboutData = [
-  {
-    title: 'skills',
-    info: [
-      {
-        title: 'Web Development',
-        icons: [
-          <FaHtml5 title="HTML5" />,
-          <FaCss3 title="CSS3" />,
-          <FaJs title="Javascript" />,
-          <FaReact title="React" />,
-          <SiNextdotjs title="Next" />,
-          <SiTailwindcss title="Tailwind CSS" />,
-          <SiRedux title="Redux" />,
-          <SiExpress title="Express" />,
-          <GrMysql title="MySQL" />,
-        ],
-      },
-      {
-        title: 'UI/UX Design',
-        icons: [
-          <FaFigma title="Figma" />,
-          <SiAdobephotoshop title="Adobe Photoshop" />,
-        ],
-      },
-    ],
-  },
-  {
-    title: 'experience',
-    info: [
-      {
-        title: 'Marketing Staff - Quick Traktor',
-        stage: '2017 - 2023',
-      },
-      {
-        title: 'Freelance at Fastwork',
-        stage: '2023 - present',
-      },
-    ],
-  },
-  {
-    title: 'credentials',
-    info: [
-      {
-        title: 'Fullstack Web Developer Bootcamp - Codemasters ID',
-        stage: '2023',
-      },
-      {
-        title: 'Backend Intermediate Class - Dicoding Indonesia',
-        stage: '2023',
-      },
-      {
-        title: 'Frontend Fundamental Class - Dicoding Indonesia',
-        stage: '2023',
-      },
-      {
-        title: 'Basic DevOps and AWS Cloud - Dicoding Indonesia',
-        stage: '2023',
-      },
-      {
-        title: 'Google Certification for Daya Analytics - Coursera',
-        stage: '2022',
-      },
-      {
-        title: 'React JS Junior Web Developer - Camp404',
-        stage: '2022',
-      },
-      {
-        title: 'Physics Engineering - Universitas Gadjah Mada',
-        stage: '2009 - 2017',
-      },
-    ],
-  },
-];
-
+import { aboutData } from '../../constants.js';
 import Avatar from '../../components/Avatar';
-
 import { motion } from 'framer-motion';
-
 import { fadeIn } from '../../variants';
 
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="h-full bg-transparent py-32 text-center xl:text-left">
+    <div className="h-[110dvh] bg-transparent py-32 text-center xl:text-left">
       <motion.div
         variants={fadeIn('right', 0.4)}
         initial="hidden"
@@ -162,7 +72,7 @@ const About = () => {
           className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
         >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
-            {aboutData.map((item, itemIndex) => {
+            {aboutData?.map((item, itemIndex) => {
               return (
                 <div
                   key={itemIndex}
@@ -178,27 +88,28 @@ const About = () => {
             })}
           </div>
           <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-3 items-center xl:items-start">
-            {aboutData[index].info.map((item, itemIndex) => {
-              return (
-                <div
-                  key={itemIndex}
-                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-black/60"
-                >
-                  <div className="font-light mb-2 md:mb-0">{item.title}</div>
-                  <div className="hidden md:flex">-</div>
-                  <div>{item.stage}</div>
-                  <div className="flex gap-x-4">
-                    {item.icons?.map((icon, itemIndex) => {
-                      return (
-                        <div key={itemIndex} className="text-2xl">
-                          {icon}
-                        </div>
-                      );
-                    })}
+            {aboutData &&
+              aboutData[index].info.map((item, itemIndex) => {
+                return (
+                  <div
+                    key={itemIndex}
+                    className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-black/60"
+                  >
+                    <div className="font-light mb-2 md:mb-0">{item.title}</div>
+                    <div className="hidden md:flex">-</div>
+                    <div>{item.stage}</div>
+                    <div className="flex gap-x-4">
+                      {item.icons?.map((icon, itemIndex) => {
+                        return (
+                          <div key={itemIndex} className="text-2xl">
+                            {icon}
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
           </div>
         </motion.div>
       </div>
