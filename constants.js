@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import { FaCss3, FaFigma, FaGit, FaHtml5, FaJs, FaReact } from 'react-icons/fa';
+import { FaFigma, FaGit, FaJs, FaReact } from 'react-icons/fa';
 import { GrMysql } from 'react-icons/gr';
 import {
   SiAdobephotoshop,
@@ -23,8 +23,6 @@ export const aboutData = [
       {
         title: 'Frontend',
         icons: [
-          <FaHtml5 title="HTML5" />,
-          <FaCss3 title="CSS3" />,
           <FaJs title="Javascript" />,
           <FaReact title="React" />,
           <SiNextdotjs title="Next" />,

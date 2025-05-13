@@ -94,8 +94,12 @@ const About = () => {
             {aboutData &&
               aboutData[index].info.map((item, itemIndex) => {
                 return (
-                  <div
-                    key={itemIndex}
+                  <motion.div
+                    variants={fadeIn('left', 0.2*itemIndex, 10 + (2*itemIndex))}
+                    initial="hidden"
+                    animate="show"
+                    exit="hidden"
+                    key={item.title}
                     className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-black/60"
                   >
                     <div className="font-light mb-2 md:mb-0">{item.title}</div>
@@ -110,7 +114,7 @@ const About = () => {
                         );
                       })}
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
           </div>
