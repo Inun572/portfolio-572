@@ -5,7 +5,7 @@ import Typed from 'typed.js';
 const TypingText = () => {
   useEffect(() => {
     const typed = new Typed('.typing', {
-      strings: ['Developer', 'Web Designer', 'Freelancer'],
+      strings: ['Web Developer', 'Web Designer', 'Partner\'\s Solutions'],
       typeSpeed: 30,
       backSpeed: 50,
       backDelay: 1000,

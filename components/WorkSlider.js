@@ -32,8 +32,8 @@ const WorkSlider = () => {
             <div className="w-full h-full relative rounded-lg bg-slate-200 cursor-pointer group">
               <Link
                 href={{
-                  pathname: '/work/[workId]',
-                  query: { workId: index + 1 },
+                  pathname: '/work/[slug]',
+                  query: { slug: slide.slug },
                 }}
               >
                 <Image

@@ -1,12 +1,19 @@
 /* eslint-disable react/jsx-key */
-import { FaCss3, FaFigma, FaHtml5, FaJs, FaReact } from 'react-icons/fa';
+import { FaCss3, FaFigma, FaGit, FaHtml5, FaJs, FaReact } from 'react-icons/fa';
 import { GrMysql } from 'react-icons/gr';
 import {
   SiAdobephotoshop,
+  SiBootstrap,
   SiExpress,
+  SiFirebase,
   SiNextdotjs,
+  SiPostgresql,
+  SiPrisma,
   SiRedux,
+  SiSupabase,
+  SiSvelte,
   SiTailwindcss,
+  SiVuedotjs,
 } from 'react-icons/si';
 
 export const aboutData = [
@@ -14,17 +21,30 @@ export const aboutData = [
     title: 'skills',
     info: [
       {
-        title: 'Web Development',
+        title: 'Frontend',
         icons: [
           <FaHtml5 title="HTML5" />,
           <FaCss3 title="CSS3" />,
           <FaJs title="Javascript" />,
           <FaReact title="React" />,
           <SiNextdotjs title="Next" />,
+          <SiVuedotjs title='Vue' />,
+          <SiSvelte title='Svelte' />,
           <SiTailwindcss title="Tailwind CSS" />,
+          <SiBootstrap title='Bootstrap CSS' />,
           <SiRedux FaCss3title="Redux" />,
+          <FaGit title='Git' />
+        ],
+      },
+      {
+        title: 'Backend',
+        icons: [
           <SiExpress title="Express" />,
           <GrMysql title="MySQL" />,
+          <SiPostgresql title='PostgreSQL' />,
+          <SiPrisma title='Prisma ORM'/>,
+          <SiSupabase title='Supabase' />,
+          <SiFirebase title='Firebase' />
         ],
       },
       {
@@ -44,8 +64,8 @@ export const aboutData = [
         stage: '2017 - 2023',
       },
       {
-        title: 'Freelance at Fastwork',
-        stage: '2023 - present',
+        title: 'Frontend Engineer - Volantis Technology',
+        stage: '2024 - present',
       },
     ],
   },
@@ -91,40 +111,47 @@ export const workSlides = [
     link: 'https://pokecard-dex.vercel.app',
     desc: 'A website contains a Pokemon TCG Gallery up-to-date from an integrated API.',
     tech: 'HTML, CSS, Javascript',
+    slug: 'poke-card-dex'
   },
   {
     title: 'Bookshelf App',
     path: '/BookshelfApp.jpg',
-    link: 'https://mybookshelfapp.vercel.app/',
+    link: 'https://mybookshelfapp.vercel.app',
     desc: 'A web application for managing the book you read, uses local storage in the browser to save the data.',
     tech: 'HTML, CSS, Javascript',
+    slug: 'bookshelf-app'
   },
   {
     title: 'My Notes App',
     path: '/mynotesapp.jpg',
-    link: 'https://mynote-572.netlify.app//',
+    link: 'https://mynote-572.netlify.app',
     desc: 'A web application for manage your precious notes.',
     tech: 'React, CSS',
+    slug: 'my-notes-app'
   },
   {
     title: 'Pohon Tautanku',
     path: '/pohontautanku.jpg',
-    link: 'https://helmiainun-link3.netlify.app/',
+    link: 'https://helmiainun-link3.netlify.app',
     desc: 'A Linktree clone for my link to social media and my website.',
     tech: 'HTML, CSS, Javascript',
+    slug: 'pohon-tautanku'
+
   },
   {
     title: 'Gradient Color Generator',
     path: '/gradient-color-generator.jpg',
-    link: 'https://another-gradients-generator.netlify.app/',
+    link: 'https://another-gradients-generator.netlify.app',
     desc: 'A tool for generating linear gradient color.',
     tech: 'React, Tailwind CSS',
+    slug: 'gradient-color-generator'
   },
   {
     title: 'Bookoe App',
     path: '/bookoe-app.jpg',
-    link: 'https://bookoe-project.vercel.app/',
+    link: 'https://bookoe-project.vercel.app',
     desc: 'A website application for your literature references.',
     tech: 'React, Tailwind CSS, SWR, Zustand',
+    slug: 'bookoe-app'
   },
 ];

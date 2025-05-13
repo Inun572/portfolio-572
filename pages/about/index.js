@@ -5,9 +5,12 @@ import { aboutData } from '../../constants.js';
 import Avatar from '../../components/Avatar';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
+import moment from 'moment';
 
 const About = () => {
   const [index, setIndex] = useState(0);
+  const workExp = moment().diff('2024-03-01', 'years');
+
   return (
     <div className="h-[110dvh] bg-transparent py-32 text-center xl:text-left">
       <motion.div
@@ -32,7 +35,7 @@ const About = () => {
             magnificent design
           </h2>
           <p className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl"mb-12 px-2 xl"px-0'>
-            Since 1 years ago, I was starting to transition my carier into web
+            Since { workExp } years ago, I was starting to transition my carier into web
             development. Focusing on Frontend development, I am always seeking
             new challenges and learning new things, to make stunning design and
             best user experience.
@@ -40,7 +43,7 @@ const About = () => {
           <div className="hidden xl:flex xl:justify-evenly xl:items-center">
             <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0 after:mr-4">
               <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                <CountUp start={0} end={1} duration={5} /> +
+                <CountUp start={0} end={workExp} duration={5} /> +
               </div>
               <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                 Years of experience
